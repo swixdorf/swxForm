@@ -1,6 +1,6 @@
 {
   "name": "swxform",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "React Native Form Components",
   "main": "index.d.ts",
   "scripts": {
