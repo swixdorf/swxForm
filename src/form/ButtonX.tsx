@@ -24,7 +24,8 @@ interface ButtonXProps extends ComponentXProps {
     style?: {
         container?: ViewStyle
         text?: TextStyle
-    }
+    },
+    children?: any
 }
 class ButtonX extends ComponentX<ButtonXProps, any> {
     constructor(props: any) {
@@ -53,6 +54,7 @@ class ButtonX extends ComponentX<ButtonXProps, any> {
 
     }
     btnPress() {
+        //@ts-ignore
         this.context && this.context.submit();
     }
     enable() {

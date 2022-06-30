@@ -12,7 +12,7 @@ class TextInputX extends ComponentX<{ validators?: tValidators, style?: { contai
         const { placeholder, style } = this.props;
         const { hasError, value } = this.state;
         return (
-            <View style={[{ borderBottomWidth: 2, borderBottomColor: 'lightgrey' }, style?.container]}>
+            <View style={[style?.container]}>
                 {!!value && <Text style={{ position: 'absolute', zIndex: 999, top: -10, paddingLeft: 5, paddingRight: 10, marginRight: 'auto' }}>{placeholder}</Text>}
                 {!!hasError && <Text style={{ position: 'absolute', zIndex: 999, top: -5, right: 0, paddingLeft: 5, paddingRight: 10, marginLeft: 'auto', color: 'red' }}>{hasError}</Text>}
                 <TextInput
@@ -23,6 +23,7 @@ class TextInputX extends ComponentX<{ validators?: tValidators, style?: { contai
                     value={value}
                     {...this.p}
                 />
+                <View style={{ borderBottomWidth: 2, borderBottomColor: 'lightgrey', position: 'absolute', bottom: 12,width:"100%" }} />
             </View>
         );
     }
